@@ -1,0 +1,243 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("./images/css\ background.jpeg");
+    background-position: center;
+    background-size: cover;
+    min-height: 1000vh;
+    background-repeat: no-repeat;
+}
+#img1{
+    width: 95vw;
+    height: 15vh;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
+#sec1{
+    width: 95vw;
+    min-height: 10vh;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    max-height: 1000vh;
+    border: 2px solid white;
+    background-image: url(./images/background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+#sec1 figure{
+    float: right;
+}
+#sec1 figure figcaption{
+    font-size: x-large;
+    font-weight: bold;
+    color: red;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 30px;
+    text-shadow: 2px 2px white;
+}
+#sec1 #img2{
+    width: 200px;
+    max-width: 500px;
+    height: 200px;
+    max-height: 500px;
+    border: 5px solid black;
+    border-radius: 120px;
+}
+#sec1 p{
+    text-align: justify;
+}
+#sec2{
+    width: 95vw;
+    height: 40vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    border: 2px solid white;
+    background-image: url(./images/background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+#sec2 h1{
+    color: blue;
+    text-align: center;
+}
+#sec2 p{
+    text-align: justify;
+}
+#sec3{
+    width: 95vw;
+    min-height: 35vh;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    max-height: 1000vh;
+    border: 2px solid white;
+    background-image: url(./images/background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+#sec3 p{
+    text-align: center;
+}
+#sec3 #img3{
+    width: 35vw;
+    height: 35vh;
+    border-radius: 20px;
+}
+#sec4{
+    width: 95vw;
+    margin-left: 2.5vw;
+    height: 197vh;
+    margin-right: 2.5vw;
+    max-height: 1000vh;
+    border: 2px solid white;
+    background-image: url(./images/background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+#sec4 h1{
+    color: blue;
+    text-align: center;
+}
+#sec4 #one{
+    width: 44vw;
+    height: 60vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+}
+#sec4 #one #img4{
+    width: 35vw;
+    height: 35vh;
+    border-radius: 20px;
+}
+#sec4 #one p{
+    text-align: justify;
+    padding: 5px;
+}
+#sec4 #two{
+    width: 44vw;
+    height: 60vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-bottom: 1vh;
+}
+#sec4 #two #img5{
+    width: 35vw;
+    height: 35vh;
+    border-radius: 20px;
+}
+#sec4 #two p{
+    text-align: justify;
+    padding: 5px;
+}
+#sec4 #three{
+    width: 44vw;
+    height: 60vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+}
+#sec4 #three #img6{
+    width: 35vw;
+    height: 35vh;
+    border-radius: 20px;
+}
+#sec4 #three p{
+    text-align: justify;
+    padding: 5px;
+}
+#sec4 #four{
+    width: 44vw;
+    height: 60vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-bottom: 1vh;
+}
+#sec4 #four #img7{
+    width: 35vw;
+    height: 35vh;
+    border-radius: 20px;
+}
+#sec4 #four p{
+    text-align: justify;
+    padding: 5px;
+}
+#sec4 #five{
+    width: 44vw;
+    height: 60vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-right: 1vw;
+}
+#sec4 #five #img8{
+    width: 35vw;
+    height: 35vh;
+    border-radius: 20px;
+}
+#sec4 #five p{
+    text-align: justify;
+    padding: 5px;
+}
+#sec4 #six{
+    width: 44vw;
+    height: 60vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-bottom: 1vh;
+}
+#sec4 #six #img9{
+    width: 35vw;
+    height: 35vh;
+    border-radius: 20px;
+}
+#sec4 #six p{
+    text-align: justify;
+    padding: 5px;
+}
+#sec5{
+    width: 95vw;
+    margin-left: 2.5vw;
+    height: 40vh;
+    margin-right: 2.5vw;
+    max-height: 1000vh;
+    border: 2px solid white;
+    background-image: url(./images/background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+#sec5 h1{
+    color: blue;
+    text-align: center;
+}
+#sec5 form{
+    border: 2px solid white;
+    justify-content: center;
+    width: 70vw;
+
+}
