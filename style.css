@@ -1,5 +1,14 @@
 .ludo,.ludo1,.ludo2{
-    display: flex;
+    display: grid;
+    grid-template-columns: 22px 22px 22px 22px 22px 22px 22px 22px 22px 22px 22px 22px 22px 22px 22px;
+}
+.ludo .one,.ludo2 .seven{
+    grid-column-start: 1;
+    grid-column-end: 7;
+}
+.ludo .three,.ludo2 .nine{
+    grid-column-start: 10;
+    grid-column-end: 16;
 }
 .one,.three,.seven,.nine
 {
@@ -19,6 +28,10 @@
 .four,.six{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
+}
+.five{
+    grid-column-start: 7;
+    grid-column-end: 10;
 }
 .five{
     width: 64px;
