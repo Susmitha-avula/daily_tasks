@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(172, 237, 240);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 45vw;
+        }
+        div{
+            width: 500px;
+            height: 200px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 20px;
+        }
+        button{
+            background-color: blueviolet;
+            color: white;
+            width: 120px;
+            height: 30px;
+        }
+        h4{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Generating OTP using HTML, CSS and JavaScript</h2>
+    <div>
+        <button>Generate OTP</button>
+        <h4>OTP is: </h4>
+    </div>
+    <script>
+        let btn=document.getElementsByTagName('button')
+        let otp=document.getElementsByTagName('h4')
+        btn[0].addEventListener('click',()=>{
+            i=0;
+            src="";
+            for(i=0;i<6;i++){
+                k=Math.floor((Math.random()*10));
+                src=src+k.toString();
+            }
+            otp[0].innerHTML=`OTP is: ${src}`;
+        })
+    </script>
+</body>
+</html>
