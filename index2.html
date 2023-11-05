@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div div{
+            border: 1px solid;
+            width: 25vw;
+            height: 20vw;
+            background-image: linear-gradient(135deg,pink,lightblue);
+        }
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            color: red;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <div class="two"></div>
+        <div class="two"></div>
+        <div class="two"></div>
+        <div class="two"></div>
+        <div class="two"></div>
+        <div class="two"></div>
+    </div><br>
+    <center><button>Suffle</button></center>
+    <script>
+        let arr=["https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg","https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg","https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg","https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg","https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg","https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"]
+        let a=document.getElementsByClassName('two');
+        function suffle(arr){
+            for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+        
+        let btn=document.getElementsByTagName('button')
+        btn[0].addEventListener('click',()=>{
+            clear();
+            arr1=suffle(arr);
+            // arr1.map((val,ind)=>{
+            // imgg=document.createElement('img');
+            // imgg.setAttribute('src',val);
+            // imgg.style.width="100%";
+            // imgg.style.height="100%";
+            // a[ind].appendChild(imgg)
+            display(arr1)
+        })
+        function display(arr1){
+            arr1.map((val,ind)=>{
+            imgg=document.createElement('img');
+            imgg.setAttribute('src',val);
+            imgg.style.width="100%";
+            imgg.style.height="100%";
+            a[ind].appendChild(imgg)
+        })
+    }
+        function clear(){
+            for(i=0;i<a.length;i++){
+                a[i].innerHTML=""
+            }
+        }
+    </script>
+</body>
+</html>

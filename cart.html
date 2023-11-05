@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         button{
+            width: 150px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button onclick="window.history.back()">Back</button>
+    
+    <script>
+        let array=[]
+        let l=document.getElementsByTagName('div')
+        array=JSON.parse(localStorage.getItem('Array'))
+        array.map((val,ind,arr)=>{
+            ul1=document.createElement('ul')
+            for(x in val){
+                if(x=='image'){
+                    
+                    imgg=document.createElement('img')
+                    imgg.setAttribute('src',val[x]);
+                    imgg.style.width="100%"
+                    imgg.style.height="100px"
+                    ul1.insertBefore(imgg,ul1.children[0]);
+                }
+                else if(x=='rating'){
+                    li1=document.createElement('li')
+                    li2=document.createElement('li')
+                    li1.innerHTML=val[x]['rate'];
+                    li2.innerHTML=val[x]['count']
+                    ul1.appendChild(li1);
+                    ul1.appendChild(li2)
+                }
+                else{
+                    li1=document.createElement('li')
+                    li1.innerHTML=val[x];
+                    ul1.appendChild(li1);
+                }
+            }
+            btnRem=document.createElement('button');
+            btnRem.innerHTML="Remove From Cart";
+            btnRem.addEventListener('click',()=>{
+                array.splice(ind,1);
+                localStorage.clear();
+                window.localStorage.setItem('Array',JSON.stringify(array))
+                display12(array);
+            })
+            ul1.appendChild(btnRem)
+            l[0].appendChild(ul1)
+            ul1.style.backgroundImage="linear-gradient(135deg,pink 6%,white 10%)"
+        ul1.style.width='25%';
+        ul1.style.paddingTop="10px";
+        ul1.style.paddingBottom='10px';
+        ul1.style.paddingRight='10px';
+        ul1.style.wordBreak="break-all";
+        ul1.style.boxShadow='0 8px 16px 0 rgba(0,0,0,0.3)';
+        })
+        function display12(array){
+            l[0].innerHTML="";
+            array.map((val,ind,arr)=>{
+            ul1=document.createElement('ul')
+            for(x in val){
+                if(x=='image'){
+                    
+                    imgg=document.createElement('img')
+                    imgg.setAttribute('src',val[x]);
+                    imgg.style.width="100%"
+                    imgg.style.height="100px"
+                    ul1.insertBefore(imgg,ul1.children[0]);
+                }
+                else if(x=='rating'){
+                    li1=document.createElement('li')
+                    li2=document.createElement('li')
+                    li1.innerHTML=val[x]['rate'];
+                    li2.innerHTML=val[x]['count']
+                    ul1.appendChild(li1);
+                    ul1.appendChild(li2)
+                }
+                else{
+                    li1=document.createElement('li')
+                    li1.innerHTML=val[x];
+                    ul1.appendChild(li1);
+                }
+            }
+            btnRem=document.createElement('button');
+            btnRem.innerHTML="Remove From Cart";
+            btnRem.addEventListener('click',()=>{
+                array.splice(ind,1);
+                display12(array);
+            })
+            ul1.appendChild(btnRem)
+            l[0].appendChild(ul1)
+            ul1.style.backgroundImage="linear-gradient(135deg,pink 6%,white 10%)"
+        ul1.style.width='25%';
+        ul1.style.paddingTop="10px";
+        ul1.style.paddingBottom='10px';
+        ul1.style.paddingRight='10px';
+        ul1.style.wordBreak="break-all";
+        ul1.style.boxShadow='0 8px 16px 0 rgba(0,0,0,0.3)';
+            })
+        }
+    
+
+        
+    //})
+
+    l[0].style.display="flex";
+    l[0].style.flexWrap="wrap";
+    l[0].style.justifyContent="space-around"
+    l[0].style.backgroundColor="rgba(0,0,255,0.1)"
+    </script>
+</body>
+</html>

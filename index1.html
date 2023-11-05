@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div div{
+            border: 1px solid;
+            width: 25vw;
+            height: 20vw;
+            background-image: linear-gradient(135deg,pink,lightblue);
+        }
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        button{
+            background-color: white;
+            color: blue;
+            width: 15vw;
+            height: 30px;
+            background-color: antiquewhite;
+            
+        }
+    </style>
+    
+</head>
+<body>
+    <button>Image1</button>
+    <button>Image2</button>
+    <button>Image3</button>
+    <button>Image4</button>
+    <button>Image5</button>
+    <button>Image6</button>
+    <div class="one">
+        <div class="two"></div>
+        <div class="two"></div>
+        <div class="two"></div>
+        <div class="two"></div>
+        <div class="two"></div>
+        <div class="two"></div>
+    </div>
+    <script>
+        var l=document.getElementsByTagName('button')
+        var k=document.getElementsByClassName('two')
+        console.log(k)
+        var arr=["https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg","https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg","https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg","https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg","https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg","https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"];
+        l[0].addEventListener('click',()=>{
+            clear();
+            let a=document.createElement('img')
+            a.setAttribute('src',arr[0])
+            a.style.width="100%"
+            a.style.height="100%"
+            k[0].appendChild(a)
+        })
+        l[1].addEventListener('click',()=>{
+            clear();
+            let a=document.createElement('img')
+            a.setAttribute('src',arr[1])
+            a.style.width="100%"
+            a.style.height="100%"
+            k[1].appendChild(a)
+        })
+        l[2].addEventListener('click',()=>{
+            clear();
+           
+            let a=document.createElement('img')
+            a.setAttribute('src',arr[2])
+            a.style.width="100%"
+            a.style.height="100%"
+            k[2].appendChild(a)
+        })
+        l[3].addEventListener('click',()=>{
+            clear();
+            
+            let a=document.createElement('img')
+            a.setAttribute('src',arr[3])
+            a.style.width="100%"
+            a.style.height="100%"
+            k[3].appendChild(a)
+        })
+        l[4].addEventListener('click',()=>{
+            clear();
+            let a=document.createElement('img')
+            a.setAttribute('src',arr[4])
+            a.style.width="100%"
+            a.style.height="100%"
+            k[4].appendChild(a)
+        })
+        l[5].addEventListener('click',()=>{
+            clear();
+            let a=document.createElement('img')
+            a.setAttribute('src',arr[5])
+            a.style.width="100%"
+            a.style.height="100%"
+            k[5].appendChild(a)
+        })
+        function clear(){
+            for(i=0;i<k.length;i++){
+                k[i].innerHTML=""
+            }
+        }
+        
+    </script>
+</body>
+</html>

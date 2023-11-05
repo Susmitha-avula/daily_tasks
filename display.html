@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            background-image: linear-gradient(135deg, lightblue,pink);
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            width: 40%;
+            text-align: left;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <center><ul></ul>
+    <button onclick="window.history.back()">Back</button></center>
+</body>
+<script>
+    let ul1=document.getElementsByTagName('ul')
+
+    let li1=document.createElement('li')
+    let imgg=document.createElement('img')
+    x=JSON.parse(localStorage.getItem('image'))
+    imgg.setAttribute('src',x)
+    imgg.style.width="80%";
+    imgg.style.height="200px";
+    let li2=document.createElement('li')
+    let li3=document.createElement('li')
+    let li4=document.createElement('li')
+    let li5=document.createElement('li')
+    let li6=document.createElement('li')
+    let li7=document.createElement('li')
+    let li8=document.createElement('li')
+
+    li2.innerHTML=localStorage.getItem('id')
+    li3.innerHTML=localStorage.getItem('title')
+    li4.innerHTML=localStorage.getItem('price')
+    li5.innerHTML=localStorage.getItem('description')
+    li6.innerHTML=localStorage.getItem('category')
+    k=JSON.parse(localStorage.getItem('rating'))
+    if(k){
+        li7.innerHTML=k['rate']
+        li8.innerHTML=k['count']
+    }
+
+    ul1[0].appendChild(imgg)
+    ul1[0].appendChild(li2)
+    ul1[0].appendChild(li3)
+    ul1[0].appendChild(li4)
+    ul1[0].appendChild(li5)
+    ul1[0].appendChild(li6)
+    ul1[0].appendChild(li7)
+    ul1[0].appendChild(li8)
+
+
+</script>
+</html>
