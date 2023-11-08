@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            height: 45vw;
+            align-items: center;
+            
+            gap: 2vw;
+        }
+        div form{
+            background-image: linear-gradient(lightblue,pink);
+            padding: 10px;
+            width: fit-content;
+
+        }
+        
+        input,textarea{
+            float: right;
+        }
+        [type='submit']{
+            float: none;
+        }
+        p{
+            text-align: center;
+            color: red;
+            display: none;
+        }
+        div{
+            width: 48vw;
+            
+            height: 45vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }
+        #two{
+            overflow: scroll;
+        }
+        ul{
+            width: 20vw;
+            border: 1px solid black;
+            background-image: linear-gradient(135deg,pink 8%,white 10%);
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <form action="">
+            <fieldset>
+                <legend>SignUp Form</legend>
+            
+            <label for="name">Full Name:</label>
+            <input type="text"><br><br>
+            <label for="DOb">Date Of Birth:</label>
+            <input type="date" required><br><br>
+            <label for="mobile">Mobile Number:</label>
+            <input type="number" minlength="10" maxlength="10" pattern="[6-9]{1}[0-9]{9}"><br><br>
+            <label for="email">Email Address:</label>
+            <input type="email"><br><br>
+            <label for="address">Address:</label>
+            <textarea name="address" id="address" cols="20" rows="1" required></textarea><br><br>
+            <center><input type="submit" Value="Register"></center>
+        </fieldset>
+        </form>
+    </div>
+    <div id="two"></div>
+    <script>
+        let divv=document.getElementsByTagName('div');
+        let form=document.forms;
+        form[0].addEventListener('submit',(e)=>{
+            e.preventDefault();
+            let name=e.target[1].value
+            let dob=e.target[2].value
+            let num=e.target[3].value
+            let email=e.target[4].value
+            let address=e.target[5].value
+            if(/..@gmail.com$/.test(email) && name.length>=5 && name.length<=8){
+                let ul=document.createElement('ul')
+                li1=document.createElement('li')
+                li2=document.createElement('li')
+                li3=document.createElement('li')
+                li4=document.createElement('li')
+                li5=document.createElement('li')
+                li1.innerHTML=name;
+                li2.innerHTML=dob;
+                li3.innerHTML=num;
+                li4.innerHTML=email;
+                li5.innerHTML=address;
+                ul.appendChild(li1)
+                ul.appendChild(li2)
+                ul.appendChild(li3)
+                ul.appendChild(li4)
+                ul.appendChild(li5)
+                divv[1].appendChild(ul);
+                e.target[1].value=""
+                e.target[2].value=""
+                e.target[3].value=""
+                e.target[4].value=""
+                e.target[5].value=""
+
+            }
+            else{
+                alert('Enter valid details')
+                e.target[1].value=""
+                e.target[2].value=""
+                e.target[3].value=""
+                e.target[4].value=""
+                e.target[5].value=""
+            }
+        })
+
+    </script>
+</body>
+</html>
